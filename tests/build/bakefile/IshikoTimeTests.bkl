@@ -19,8 +19,14 @@ program IshikoTimeTests : IshikoTestsCore
         libs += IshikoTestsCore IshikoProcess IshikoErrors boost_filesystem;
     }
 
+    headers
+    {
+        ../../src/DateTests.hpp
+    }
+
     sources
     {
+        ../../src/DateTests.cpp
         ../../src/main.cpp
     }
 }
