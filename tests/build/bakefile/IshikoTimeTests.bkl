@@ -1,5 +1,6 @@
 ishikopath = envvar("ISHIKO_CPP");
 import $(ishikopath)/tests/include/Ishiko/Tests/Core.bkl;
+import $(ishikopath)/time/include/Ishiko/Time.bkl;
 
 toolsets = gnu vs2019 vs2017 vs2015 vs2013;
 
@@ -9,18 +10,24 @@ vs2017.solutionfile = ../vc15/IshikoTimeTests.sln;
 vs2015.solutionfile = ../vc14/IshikoTimeTests.sln;
 vs2013.solutionfile = ../vc12/IshikoTimeTests.sln;
 
-program IshikoTimeTests : IshikoTestsCore
+program IshikoTimeTests : IshikoTestsCore, IshikoTime
 {
     archs = x86 x86_64;
 
     if ($(toolset) == gnu)
     {
         cxx-compiler-options = "-std=c++11";
-        libs += IshikoTestsCore IshikoProcess IshikoErrors boost_filesystem;
+        libs += IshikoTestsCore IshikoProcess IshikoTime IshikoErrors fmt boost_filesystem;
+    }
+
+    headers
+    {
+        ../../src/DateTests.hpp
     }
 
     sources
     {
+        ../../src/DateTests.cpp
         ../../src/main.cpp
     }
 }

@@ -1,0 +1,24 @@
+ishikopath = envvar("ISHIKO_CPP");
+import $(ishikopath)/third-party-glue/include/Ishiko/ThirdParty/Boost.bkl;
+import $(ishikopath)/third-party-glue/include/Ishiko/ThirdParty/fmt.bkl;
+
+setting ISHIKO_CPP_TIME_ROOT
+{
+    help = "Path to the Ishiko Timeinstallation";
+    default = '$(ISHIKO_CPP)/time';
+}
+
+template IshikoTime : fmt, Boost
+{
+    includedirs += $(ISHIKO_CPP_TIME_ROOT)/include;
+
+    if ($(toolset) == gnu)
+    {
+        libdirs += $(ISHIKO_CPP_TIME_ROOT)/lib;
+    }
+
+    if ($(toolset) != gnu)
+    {
+        libdirs += $(ISHIKO_CPP_TIME_ROOT)/lib/$(arch);
+    }
+}
