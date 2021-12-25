@@ -1,0 +1,20 @@
+setting ISHIKO_CPP_TIME_ROOT
+{
+    help = "Path to the Ishiko Timeinstallation";
+    default = '$(ISHIKO_CPP)/time';
+}
+
+template IshikoTime
+{
+    includedirs += $(ISHIKO_CPP_TIME_ROOT)/include;
+
+    if ($(toolset) == gnu)
+    {
+        libdirs += $(ISHIKO_CPP_TIME_ROOT)/lib;
+    }
+
+    if ($(toolset) != gnu)
+    {
+        libdirs += $(ISHIKO_CPP_TIME_ROOT)/lib/$(arch);
+    }
+}
