@@ -4,6 +4,7 @@
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
 
+#include "DateTests.hpp"
 #include <Ishiko/Tests/Core.h>
 
 using namespace Ishiko::Tests;
@@ -11,6 +12,9 @@ using namespace Ishiko::Tests;
 int main(int argc, char* argv[])
 {
     TestHarness theTestHarness("IshikoTime");
+
+    TestSequence& theTests = theTestHarness.tests();
+    theTests.append<DateTests>();
 
     return theTestHarness.run();
 }
