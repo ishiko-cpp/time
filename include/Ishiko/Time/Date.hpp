@@ -7,6 +7,8 @@
 #ifndef _ISHIKO_TIME_DATE_HPP_
 #define _ISHIKO_TIME_DATE_HPP_
 
+#include <boost/date_time.hpp>
+
 namespace Ishiko
 {
 namespace Time
@@ -14,6 +16,31 @@ namespace Time
 
 class Date
 {
+public:
+    enum Month
+    {
+        january = 1,
+        february = 2,
+        march = 3,
+        april = 4,
+        may = 5,
+        june = 6,
+        july = 7,
+        august = 8,
+        september = 9,
+        october = 10,
+        november = 11,
+        december = 12
+    };
+
+    Date(int year, Month month, unsigned char day);
+
+    int year() const;
+    Month month() const;
+    unsigned char day() const;
+
+private:
+    boost::gregorian::date m_date;
 };
 
 }

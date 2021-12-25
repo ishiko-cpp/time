@@ -6,6 +6,7 @@
 
 #include "DateTests.hpp"
 #include <Ishiko/Tests/Core.h>
+#include <Ishiko/Time/linkoptions.hpp>
 
 using namespace Ishiko::Tests;
 

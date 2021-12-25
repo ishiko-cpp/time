@@ -1,10 +1,13 @@
+ishikopath = envvar("ISHIKO_CPP");
+import $(ishikopath)/third-party-glue/include/Ishiko/ThirdParty/Boost.bkl;
+
 setting ISHIKO_CPP_TIME_ROOT
 {
     help = "Path to the Ishiko Timeinstallation";
     default = '$(ISHIKO_CPP)/time';
 }
 
-template IshikoTime
+template IshikoTime : Boost
 {
     includedirs += $(ISHIKO_CPP_TIME_ROOT)/include;
 

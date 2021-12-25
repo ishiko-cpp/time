@@ -18,7 +18,10 @@ DateTests::DateTests(const TestNumber& number, const TestEnvironment& environmen
 
 void DateTests::ConstructorTest1(Test& test)
 {
-    Date date;
+    Date date(2021, Date::december, 25);
 
+    ISHIKO_FAIL_IF_NEQ(date.year(), 2021);
+    ISHIKO_FAIL_IF_NEQ(date.month(), Date::december);
+    ISHIKO_FAIL_IF_NEQ(date.day(), 25);
     ISHIKO_PASS();
 }
