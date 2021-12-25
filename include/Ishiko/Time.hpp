@@ -9,6 +9,6 @@
 
 #include "Time/Date.hpp"
 
-#include "Time/linkoptions.h"
+#include "Time/linkoptions.hpp"
 
 #endif

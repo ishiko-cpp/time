@@ -4,7 +4,7 @@
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
 
-#ifndef _ISHIKO_TIME_DATE_H_
-#define _ISHIKO_TIME_DATE_H_
+#ifndef _ISHIKO_TIME_DATE_HPP_
+#define _ISHIKO_TIME_DATE_HPP_
 
 #endif

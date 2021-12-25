@@ -4,8 +4,8 @@
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
 
-#ifndef _ISHIKO_TIME_LINKOPTIONS_H_
-#define _ISHIKO_TIME_LINKOPTIONS_H_
+#ifndef _ISHIKO_TIME_LINKOPTIONS_HPP_
+#define _ISHIKO_TIME_LINKOPTIONS_HPP_
 
 #ifdef _DEBUG
 #pragma comment(lib, "IshikoTime-d.lib")
