@@ -7,4 +7,16 @@
 #ifndef _ISHIKO_TIME_DATE_HPP_
 #define _ISHIKO_TIME_DATE_HPP_
 
+namespace Ishiko
+{
+namespace Time
+{
+
+class Date
+{
+};
+
+}
+}
+
 #endif

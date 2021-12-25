@@ -5,7 +5,9 @@
 */
 
 #include "DateTests.hpp"
+#include <Ishiko/Time/Date.hpp>
 
+using namespace Ishiko::Time;
 using namespace Ishiko::Tests;
 
 DateTests::DateTests(const TestNumber& number, const TestEnvironment& environment)
@@ -16,4 +18,7 @@ DateTests::DateTests(const TestNumber& number, const TestEnvironment& environmen
 
 void DateTests::ConstructorTest1(Test& test)
 {
+    Date date;
+
+    ISHIKO_PASS();
 }
