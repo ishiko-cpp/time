@@ -14,6 +14,7 @@ DateTests::DateTests(const TestNumber& number, const TestEnvironment& environmen
     : TestSequence(number, "Date tests", environment)
 {
     append<HeapAllocationErrorsTest>("Constructor test 1", ConstructorTest1);
+    append<HeapAllocationErrorsTest>("toISO8601String test 1", ToISO8601StringTest1);
 }
 
 void DateTests::ConstructorTest1(Test& test)
@@ -23,5 +24,13 @@ void DateTests::ConstructorTest1(Test& test)
     ISHIKO_FAIL_IF_NEQ(date.year(), 2021);
     ISHIKO_FAIL_IF_NEQ(date.month(), Date::december);
     ISHIKO_FAIL_IF_NEQ(date.day(), 25);
+    ISHIKO_PASS();
+}
+
+void DateTests::ToISO8601StringTest1(Test& test)
+{
+    Date date(2021, Date::january, 3);
+
+    ISHIKO_FAIL_IF_NEQ(date.toISO8601String(), "2021-01-03");
     ISHIKO_PASS();
 }

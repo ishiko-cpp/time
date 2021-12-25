@@ -5,6 +5,7 @@
 */
 
 #include "Date.hpp"
+#include <fmt/core.h>
 
 namespace Ishiko
 {
@@ -29,6 +30,11 @@ Date::Month Date::month() const
 unsigned char Date::day() const
 {
     return static_cast<unsigned char>(m_date.day());
+}
+
+std::string Date::toISO8601String() const
+{
+    return fmt::format("{:#04d}-{:#02d}-{:#02d}", m_date.year(), m_date.month().as_number(), m_date.day());
 }
 
 }

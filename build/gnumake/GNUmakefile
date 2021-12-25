@@ -38,6 +38,7 @@ endif
 # settings:
 #
 #      ISHIKO_CPP_BOOST_ROOT  Path to the Boost installation
+#      ISHIKO_CPP_FMT_ROOT    Path to the fmt installation
 
 # Use "make RANLIB=''" for platforms without ranlib.
 RANLIB ?= ranlib
@@ -66,6 +67,8 @@ endif
 
 # Path to the Boost installation
 ISHIKO_CPP_BOOST_ROOT ?= $(ISHIKO_CPP_THIRD_PARTY_BOOST)
+# Path to the fmt installation
+ISHIKO_CPP_FMT_ROOT ?= $(ISHIKO_CPP_THIRD_PARTY_FMT)
 
 # ------------
 
@@ -76,7 +79,7 @@ all: ../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),IshikoTime-d,I
 	$(RANLIB) $@
 
 $(_builddir)IshikoTime_Date.o: ../../src/Date.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/Date.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/Date.cpp
 
 clean:
 	rm -f $(_builddir)*.o

@@ -16,6 +16,7 @@ public:
 
 private:
     static void ConstructorTest1(Ishiko::Tests::Test& test);
+    static void ToISO8601StringTest1(Ishiko::Tests::Test& test);
 };
 
 #endif
