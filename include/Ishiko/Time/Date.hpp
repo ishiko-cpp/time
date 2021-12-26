@@ -34,6 +34,7 @@ public:
     };
 
     Date(int year, Month month, unsigned char day);
+    Date(const boost::gregorian::date& date);
 
     int year() const;
     Month month() const;
