@@ -1,13 +1,13 @@
 /*
-    Copyright (c) 2021 Xavier Leclercq
+    Copyright (c) 2021-2022 Xavier Leclercq
     Released under the MIT License
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
 
-#ifndef _ISHIKO_CPP_TIME_TESTS_DATETESTS_H_
-#define _ISHIKO_CPP_TIME_TESTS_DATETESTS_H_
+#ifndef _ISHIKO_CPP_TIME_TESTS_DATETESTS_HPP_
+#define _ISHIKO_CPP_TIME_TESTS_DATETESTS_HPP_
 
-#include <Ishiko/Tests/Core.h>
+#include <Ishiko/Tests/Core.hpp>
 
 class DateTests : public Ishiko::Tests::TestSequence
 {
