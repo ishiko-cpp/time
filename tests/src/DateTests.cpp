@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2021 Xavier Leclercq
+    Copyright (c) 2021-2022 Xavier Leclercq
     Released under the MIT License
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
@@ -10,8 +10,8 @@
 using namespace Ishiko::Time;
 using namespace Ishiko::Tests;
 
-DateTests::DateTests(const TestNumber& number, const TestEnvironment& environment)
-    : TestSequence(number, "Date tests", environment)
+DateTests::DateTests(const TestNumber& number, const TestContext& context)
+    : TestSequence(number, "Date tests", context)
 {
     append<HeapAllocationErrorsTest>("Constructor test 1", ConstructorTest1);
     append<HeapAllocationErrorsTest>("toISO8601String test 1", ToISO8601StringTest1);

@@ -12,7 +12,7 @@
 class DateTests : public Ishiko::Tests::TestSequence
 {
 public:
-    DateTests(const Ishiko::Tests::TestNumber& number, const Ishiko::Tests::TestEnvironment& environment);
+    DateTests(const Ishiko::Tests::TestNumber& number, const Ishiko::Tests::TestContext& context);
 
 private:
     static void ConstructorTest1(Ishiko::Tests::Test& test);
