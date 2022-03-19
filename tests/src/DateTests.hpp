@@ -9,14 +9,14 @@
 
 #include <Ishiko/Tests/Core.hpp>
 
-class DateTests : public Ishiko::Tests::TestSequence
+class DateTests : public Ishiko::TestSequence
 {
 public:
-    DateTests(const Ishiko::Tests::TestNumber& number, const Ishiko::Tests::TestContext& context);
+    DateTests(const Ishiko::TestNumber& number, const Ishiko::TestContext& context);
 
 private:
-    static void ConstructorTest1(Ishiko::Tests::Test& test);
-    static void ToISO8601StringTest1(Ishiko::Tests::Test& test);
+    static void ConstructorTest1(Ishiko::Test& test);
+    static void ToISO8601StringTest1(Ishiko::Test& test);
 };
 
 #endif

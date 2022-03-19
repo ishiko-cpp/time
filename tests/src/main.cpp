@@ -5,16 +5,18 @@
 */
 
 #include "DateTests.hpp"
+#include "TimePointTests.hpp"
 #include <Ishiko/Tests/Core.hpp>
 #include <Ishiko/Time/linkoptions.hpp>
 
-using namespace Ishiko::Tests;
+using namespace Ishiko;
 
 int main(int argc, char* argv[])
 {
     TestHarness theTestHarness("IshikoTime");
 
     TestSequence& theTests = theTestHarness.tests();
+    theTests.append<TimePointTests>();
     theTests.append<DateTests>();
 
     return theTestHarness.run();
