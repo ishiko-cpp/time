@@ -15,6 +15,7 @@
 namespace Ishiko
 {
 
+// TODO: I don't like the fact this is called TimePoint, Time would feel more natural
 class TimePoint
 {
 public:

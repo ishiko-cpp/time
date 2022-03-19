@@ -15,6 +15,11 @@ Date::Date(int year, Month month, unsigned char day)
 {
 }
 
+Date::Date(int year, unsigned char month, unsigned char day)
+    : m_date(year, month, day)
+{
+}
+
 Date::Date(const boost::gregorian::date& date)
     : m_date(date)
 {
