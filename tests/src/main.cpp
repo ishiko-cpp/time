@@ -8,7 +8,7 @@
 #include <Ishiko/Tests/Core.hpp>
 #include <Ishiko/Time/linkoptions.hpp>
 
-using namespace Ishiko::Tests;
+using namespace Ishiko;
 
 int main(int argc, char* argv[])
 {
