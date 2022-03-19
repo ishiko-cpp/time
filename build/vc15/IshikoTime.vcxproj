@@ -151,11 +151,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Date.cpp" />
+    <ClCompile Include="..\..\src\TimeOfDay.cpp" />
+    <ClCompile Include="..\..\src\TimePoint.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\Ishiko\Time.hpp" />
     <ClInclude Include="..\..\include\Ishiko\Time\Date.hpp" />
     <ClInclude Include="..\..\include\Ishiko\Time\linkoptions.hpp" />
+    <ClInclude Include="..\..\include\Ishiko\Time\TimeOfDay.hpp" />
+    <ClInclude Include="..\..\include\Ishiko\Time\TimePoint.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
