@@ -8,7 +8,6 @@
 #include <Ishiko/Time/Date.hpp>
 
 using namespace Ishiko;
-using namespace Ishiko::Time;
 
 DateTests::DateTests(const TestNumber& number, const TestContext& context)
     : TestSequence(number, "Date tests", context)

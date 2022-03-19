@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2021 Xavier Leclercq
+    Copyright (c) 2021-2022 Xavier Leclercq
     Released under the MIT License
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
@@ -8,8 +8,6 @@
 #include <fmt/core.h>
 
 namespace Ishiko
-{
-namespace Time
 {
 
 Date::Date(int year, Month month, unsigned char day)
@@ -42,5 +40,4 @@ std::string Date::toISO8601String() const
     return fmt::format("{:#04d}-{:#02d}-{:#02d}", m_date.year(), m_date.month().as_number(), m_date.day());
 }
 
-}
 }

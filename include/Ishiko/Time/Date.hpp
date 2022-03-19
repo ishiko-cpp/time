@@ -1,17 +1,15 @@
 /*
-    Copyright (c) 2021 Xavier Leclercq
+    Copyright (c) 2021-2022 Xavier Leclercq
     Released under the MIT License
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
 
-#ifndef _ISHIKO_TIME_DATE_HPP_
-#define _ISHIKO_TIME_DATE_HPP_
+#ifndef _ISHIKO_CPP_TIME_DATE_HPP_
+#define _ISHIKO_CPP_TIME_DATE_HPP_
 
 #include <boost/date_time.hpp>
 
 namespace Ishiko
-{
-namespace Time
 {
 
 class Date
@@ -46,7 +44,6 @@ private:
     boost::gregorian::date m_date;
 };
 
-}
 }
 
 #endif

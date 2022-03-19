@@ -37,10 +37,12 @@ library IshikoTime : fmt, Boost
         ../../include/Ishiko/Time.hpp
         ../../include/Ishiko/Time/Date.hpp
         ../../include/Ishiko/Time/linkoptions.hpp
+        ../../include/Ishiko/Time/TimePoint.hpp
     }
 
     sources
     {
         ../../src/Date.cpp
+        ../../src/TimePoint.cpp
     }
 }
