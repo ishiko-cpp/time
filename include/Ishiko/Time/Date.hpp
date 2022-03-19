@@ -38,6 +38,7 @@ public:
     Month month() const;
     unsigned char day() const;
 
+    boost::gregorian::date toBoostGregorianDate() const;
     std::string toISO8601String() const;
 
 private:

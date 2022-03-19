@@ -23,11 +23,13 @@ program IshikoTimeTests : IshikoTestsCore, IshikoTime
     headers
     {
         ../../src/DateTests.hpp
+        ../../src/TimePointTests.hpp
     }
 
     sources
     {
         ../../src/DateTests.cpp
         ../../src/main.cpp
+        ../../src/TimePointTests.cpp
     }
 }
