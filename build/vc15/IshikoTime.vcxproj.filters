@@ -23,6 +23,9 @@
     <ClInclude Include="..\..\include\Ishiko\Time\Date.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\Ishiko\Time\DayOfWeek.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\include\Ishiko\Time\linkoptions.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -38,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Date.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\DayOfWeek.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\SystemTime.cpp">

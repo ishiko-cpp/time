@@ -151,6 +151,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Date.cpp" />
+    <ClCompile Include="..\..\src\DayOfWeek.cpp" />
     <ClCompile Include="..\..\src\SystemTime.cpp" />
     <ClCompile Include="..\..\src\TimeOfDay.cpp" />
     <ClCompile Include="..\..\src\UTCTime.cpp" />
@@ -158,6 +159,7 @@
   <ItemGroup>
     <ClInclude Include="..\..\include\Ishiko\Time.hpp" />
     <ClInclude Include="..\..\include\Ishiko\Time\Date.hpp" />
+    <ClInclude Include="..\..\include\Ishiko\Time\DayOfWeek.hpp" />
     <ClInclude Include="..\..\include\Ishiko\Time\linkoptions.hpp" />
     <ClInclude Include="..\..\include\Ishiko\Time\SystemTime.hpp" />
     <ClInclude Include="..\..\include\Ishiko\Time\TimeOfDay.hpp" />
