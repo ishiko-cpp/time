@@ -16,12 +16,11 @@ class TimeOfDay
 {
 public:
     TimeOfDay(unsigned char hours, unsigned char minutes, unsigned char seconds);
+    TimeOfDay(boost::posix_time::time_duration timeOfDay);
 
     unsigned char hours() const;
     unsigned char minutes() const;
     unsigned char seconds() const;
-
-    boost::posix_time::time_duration toBoostTimeDuration() const;
 
 private:
     boost::posix_time::time_duration m_timeOfDay;

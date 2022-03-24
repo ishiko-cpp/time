@@ -6,11 +6,18 @@
 
 #include "TimeOfDay.hpp"
 
+using namespace boost::posix_time;
+
 namespace Ishiko
 {
 
 TimeOfDay::TimeOfDay(unsigned char hours, unsigned char minutes, unsigned char seconds)
     : m_timeOfDay(hours, minutes, seconds)
+{
+}
+
+TimeOfDay::TimeOfDay(time_duration timeOfDay)
+    : m_timeOfDay(timeOfDay)
 {
 }
 
@@ -27,11 +34,6 @@ unsigned char TimeOfDay::minutes() const
 unsigned char TimeOfDay::seconds() const
 {
     return m_timeOfDay.seconds();
-}
-
-boost::posix_time::time_duration TimeOfDay::toBoostTimeDuration() const
-{
-    return m_timeOfDay;
 }
 
 }
