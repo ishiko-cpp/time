@@ -7,10 +7,8 @@
 #ifndef _ISHIKO_CPP_TIME_SYSTEMTIME_HPP_
 #define _ISHIKO_CPP_TIME_SYSTEMTIME_HPP_
 
-#include "Date.hpp"
-#include "TimeOfDay.hpp"
+#include "UTCTime.hpp"
 #include <boost/date_time.hpp>
-#include <string>
 
 namespace Ishiko
 {
@@ -20,11 +18,10 @@ namespace Ishiko
 class SystemTime
 {
 public:
-    SystemTime(const Date& date, const TimeOfDay& timeOfDay);
     SystemTime(boost::posix_time::ptime timePoint);
     static SystemTime Now();
 
-    std::string toRFC7231String() const;
+    UTCTime toUTCTime() const;
 
 private:
     boost::posix_time::ptime m_time;

@@ -7,6 +7,10 @@
 #ifndef _ISHIKO_CPP_TIME_UTCTIME_HPP_
 #define _ISHIKO_CPP_TIME_UTCTIME_HPP_
 
+#include "Date.hpp"
+#include "TimeOfDay.hpp"
+#include <string>
+
 namespace Ishiko
 {
 
@@ -14,6 +18,15 @@ namespace Ishiko
 // portable way
 class UTCTime
 {
+public:
+    UTCTime(const Date& date, const TimeOfDay& timeOfDay);
+    static UTCTime Now();
+
+    std::string toRFC7231String() const;
+
+private:
+    Date m_date;
+    TimeOfDay m_timeOfDay;
 };
 
 }
