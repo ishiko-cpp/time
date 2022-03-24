@@ -4,7 +4,7 @@
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
 
-#include "TimePoint.hpp"
+#include "SystemTime.hpp"
 #include <fmt/core.h>
 
 using namespace boost::gregorian;
@@ -14,25 +14,26 @@ using namespace std;
 namespace Ishiko
 {
 
-TimePoint::TimePoint(const Date& date, const TimeOfDay& timeOfDay)
-    : m_timePoint(date.toBoostGregorianDate(), timeOfDay.toBoostTimeDuration())
+// TODO: error if date out of acceptable range
+SystemTime::SystemTime(const Date& date, const TimeOfDay& timeOfDay)
+    : m_time(date.toBoostGregorianDate(), timeOfDay.toBoostTimeDuration())
 {
 }
 
-TimePoint::TimePoint(ptime timePoint)
-    : m_timePoint(timePoint)
+SystemTime::SystemTime(ptime timePoint)
+    : m_time(timePoint)
 {
 }
 
-TimePoint TimePoint::Now()
+SystemTime SystemTime::Now()
 {
-    return TimePoint(second_clock::universal_time());
+    return SystemTime(second_clock::universal_time());
 }
 
-string TimePoint::toRFC7231String() const
+string SystemTime::toRFC7231String() const
 {
-    const date& d = m_timePoint.date();
-    const time_duration& t = m_timePoint.time_of_day();
+    const date& d = m_time.date();
+    const time_duration& t = m_time.time_of_day();
     return fmt::format("{:s}, {:#02d} {:s} {:#04d} {:#02d}:{:#02d}:{:#02d} GMT", d.day_of_week().as_short_string(),
         d.day(), d.month().as_short_string(), d.year(), t.hours(), t.minutes(), t.seconds());
 }

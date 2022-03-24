@@ -8,8 +8,9 @@
 #define _ISHIKO_CPP_TIME_HPP_
 
 #include "Time/Date.hpp"
+#include "Time/SystemTime.hpp"
 #include "Time/TimeOfDay.hpp"
-#include "Time/TimePoint.hpp"
+#include "Time/UTCTime.hpp"
 
 #include "Time/linkoptions.hpp"
 

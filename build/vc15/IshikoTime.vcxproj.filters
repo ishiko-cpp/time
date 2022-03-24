@@ -26,10 +26,13 @@
     <ClInclude Include="..\..\include\Ishiko\Time\linkoptions.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\Ishiko\Time\SystemTime.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\include\Ishiko\Time\TimeOfDay.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\Ishiko\Time\TimePoint.hpp">
+    <ClInclude Include="..\..\include\Ishiko\Time\UTCTime.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -37,10 +40,13 @@
     <ClCompile Include="..\..\src\Date.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\SystemTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\src\TimeOfDay.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\TimePoint.cpp">
+    <ClCompile Include="..\..\src\UTCTime.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -37,14 +37,16 @@ library IshikoTime : fmt, Boost
         ../../include/Ishiko/Time.hpp
         ../../include/Ishiko/Time/Date.hpp
         ../../include/Ishiko/Time/linkoptions.hpp
+        ../../include/Ishiko/Time/SystemTime.hpp
         ../../include/Ishiko/Time/TimeOfDay.hpp
-        ../../include/Ishiko/Time/TimePoint.hpp
+        ../../include/Ishiko/Time/UTCTime.hpp
     }
 
     sources
     {
         ../../src/Date.cpp
+        ../../src/SystemTime.cpp
         ../../src/TimeOfDay.cpp
-        ../../src/TimePoint.cpp
+        ../../src/UTCTime.cpp
     }
 }
