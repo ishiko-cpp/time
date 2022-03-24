@@ -5,7 +5,8 @@
 */
 
 #include "DateTests.hpp"
-#include "TimePointTests.hpp"
+#include "SystemTimeTests.hpp"
+#include "UTCTimeTests.hpp"
 #include <Ishiko/Tests/Core.hpp>
 #include <Ishiko/Time/linkoptions.hpp>
 
@@ -16,8 +17,9 @@ int main(int argc, char* argv[])
     TestHarness theTestHarness("IshikoTime");
 
     TestSequence& theTests = theTestHarness.tests();
-    theTests.append<TimePointTests>();
+    theTests.append<SystemTimeTests>();
     theTests.append<DateTests>();
+    theTests.append<UTCTimeTests>();
 
     return theTestHarness.run();
 }
