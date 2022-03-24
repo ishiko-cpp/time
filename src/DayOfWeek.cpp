@@ -5,3 +5,21 @@
 */
 
 #include "DayOfWeek.hpp"
+
+using namespace boost::gregorian;
+using namespace std;
+
+namespace Ishiko
+{
+    
+DayOfWeek::DayOfWeek(greg_weekday dayOfWeek)
+    : m_dayOfWeek(dayOfWeek)
+{
+}
+
+string DayOfWeek::toShortString() const
+{
+    return m_dayOfWeek.as_short_string();
+}
+
+}
