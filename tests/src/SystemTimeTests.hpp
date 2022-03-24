@@ -4,15 +4,15 @@
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
 
-#ifndef _ISHIKO_CPP_TIME_TESTS_TIMEPOINTTESTS_HPP_
-#define _ISHIKO_CPP_TIME_TESTS_TIMEPOINTTESTS_HPP_
+#ifndef _ISHIKO_CPP_TIME_TESTS_SYSTEMTIMETESTS_HPP_
+#define _ISHIKO_CPP_TIME_TESTS_SYSTEMTIMETESTS_HPP_
 
 #include <Ishiko/Tests/Core.hpp>
 
-class TimePointTests : public Ishiko::TestSequence
+class SystemTimeTests : public Ishiko::TestSequence
 {
 public:
-    TimePointTests(const Ishiko::TestNumber& number, const Ishiko::TestContext& context);
+    SystemTimeTests(const Ishiko::TestNumber& number, const Ishiko::TestContext& context);
 
 private:
     static void ConstructorTest1(Ishiko::Test& test);

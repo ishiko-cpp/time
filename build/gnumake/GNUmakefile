@@ -74,18 +74,21 @@ ISHIKO_CPP_FMT_ROOT ?= $(ISHIKO_CPP_THIRD_PARTY_FMT)
 
 all: ../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),IshikoTime-d,IshikoTime).a
 
-../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),IshikoTime-d,IshikoTime).a: $(_builddir)IshikoTime_Date.o $(_builddir)IshikoTime_TimeOfDay.o $(_builddir)IshikoTime_TimePoint.o
-	$(AR) rc $@ $(_builddir)IshikoTime_Date.o $(_builddir)IshikoTime_TimeOfDay.o $(_builddir)IshikoTime_TimePoint.o
+../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),IshikoTime-d,IshikoTime).a: $(_builddir)IshikoTime_Date.o $(_builddir)IshikoTime_SystemTime.o $(_builddir)IshikoTime_TimeOfDay.o $(_builddir)IshikoTime_UTCTime.o
+	$(AR) rc $@ $(_builddir)IshikoTime_Date.o $(_builddir)IshikoTime_SystemTime.o $(_builddir)IshikoTime_TimeOfDay.o $(_builddir)IshikoTime_UTCTime.o
 	$(RANLIB) $@
 
 $(_builddir)IshikoTime_Date.o: ../../src/Date.cpp
 	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/Date.cpp
 
+$(_builddir)IshikoTime_SystemTime.o: ../../src/SystemTime.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/SystemTime.cpp
+
 $(_builddir)IshikoTime_TimeOfDay.o: ../../src/TimeOfDay.cpp
 	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/TimeOfDay.cpp
 
-$(_builddir)IshikoTime_TimePoint.o: ../../src/TimePoint.cpp
-	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/TimePoint.cpp
+$(_builddir)IshikoTime_UTCTime.o: ../../src/UTCTime.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/UTCTime.cpp
 
 clean:
 	rm -f $(_builddir)*.o
