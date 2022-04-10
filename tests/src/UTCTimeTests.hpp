@@ -7,7 +7,7 @@
 #ifndef _ISHIKO_CPP_TIME_TESTS_UTCTIMETESTS_HPP_
 #define _ISHIKO_CPP_TIME_TESTS_UTCTIMETESTS_HPP_
 
-#include <Ishiko/Tests/Core.hpp>
+#include <Ishiko/TestFramework/Core.hpp>
 
 class UTCTimeTests : public Ishiko::TestSequence
 {
