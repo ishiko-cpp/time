@@ -7,7 +7,7 @@
 #ifndef _ISHIKO_CPP_TIME_TESTS_SYSTEMTIMETESTS_HPP_
 #define _ISHIKO_CPP_TIME_TESTS_SYSTEMTIMETESTS_HPP_
 
-#include <Ishiko/Tests/Core.hpp>
+#include <Ishiko/TestFramework/Core.hpp>
 
 class SystemTimeTests : public Ishiko::TestSequence
 {
