@@ -7,7 +7,7 @@
 #include "DateTests.hpp"
 #include "SystemTimeTests.hpp"
 #include "UTCTimeTests.hpp"
-#include <Ishiko/Tests/Core.hpp>
+#include <Ishiko/TestFramework/Core.hpp>
 #include <Ishiko/Time/linkoptions.hpp>
 
 using namespace Ishiko;
