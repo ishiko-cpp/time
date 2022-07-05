@@ -18,6 +18,7 @@ namespace Ishiko
 class SystemTime
 {
 public:
+    SystemTime();
     SystemTime(boost::posix_time::ptime timePoint);
     static SystemTime Now();
 
