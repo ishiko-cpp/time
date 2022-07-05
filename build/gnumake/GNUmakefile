@@ -74,8 +74,8 @@ ISHIKO_CPP_FMT_ROOT ?= $(ISHIKO_CPP_THIRD_PARTY_FMT)
 
 all: ../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),IshikoTime-d,IshikoTime).a
 
-../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),IshikoTime-d,IshikoTime).a: $(_builddir)IshikoTime_Date.o $(_builddir)IshikoTime_DayOfWeek.o $(_builddir)IshikoTime_Month.o $(_builddir)IshikoTime_SystemTime.o $(_builddir)IshikoTime_TimeOfDay.o $(_builddir)IshikoTime_UTCTime.o
-	$(AR) rc $@ $(_builddir)IshikoTime_Date.o $(_builddir)IshikoTime_DayOfWeek.o $(_builddir)IshikoTime_Month.o $(_builddir)IshikoTime_SystemTime.o $(_builddir)IshikoTime_TimeOfDay.o $(_builddir)IshikoTime_UTCTime.o
+../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),IshikoTime-d,IshikoTime).a: $(_builddir)IshikoTime_Date.o $(_builddir)IshikoTime_DayOfWeek.o $(_builddir)IshikoTime_Month.o $(_builddir)IshikoTime_Stopwatch.o $(_builddir)IshikoTime_SystemTime.o $(_builddir)IshikoTime_TimeOfDay.o $(_builddir)IshikoTime_UTCTime.o
+	$(AR) rc $@ $(_builddir)IshikoTime_Date.o $(_builddir)IshikoTime_DayOfWeek.o $(_builddir)IshikoTime_Month.o $(_builddir)IshikoTime_Stopwatch.o $(_builddir)IshikoTime_SystemTime.o $(_builddir)IshikoTime_TimeOfDay.o $(_builddir)IshikoTime_UTCTime.o
 	$(RANLIB) $@
 
 $(_builddir)IshikoTime_Date.o: ../../src/Date.cpp
@@ -86,6 +86,9 @@ $(_builddir)IshikoTime_DayOfWeek.o: ../../src/DayOfWeek.cpp
 
 $(_builddir)IshikoTime_Month.o: ../../src/Month.cpp
 	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/Month.cpp
+
+$(_builddir)IshikoTime_Stopwatch.o: ../../src/Stopwatch.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/Stopwatch.cpp
 
 $(_builddir)IshikoTime_SystemTime.o: ../../src/SystemTime.cpp
 	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/SystemTime.cpp
