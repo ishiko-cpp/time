@@ -17,12 +17,13 @@ program IshikoTimeTests : IshikoTestFrameworkCore, IshikoTime
     if ($(toolset) == gnu)
     {
         cxx-compiler-options = "-std=c++11";
-        libs += IshikoTestFrameworkCore IshikoProcess IshikoTime IshikoErrors fmt boost_filesystem;
+        libs += IshikoTestFrameworkCore IshikoConfiguration IshikoXML IshikoFileSystem IshikoProcess IshikoTime IshikoText IshikoErrors fmt boost_filesystem;
     }
 
     headers
     {
         ../../src/DateTests.hpp
+        ../../src/StopwatchTests.hpp
         ../../src/SystemTimeTests.hpp
         ../../src/UTCTimeTests.hpp
     }
@@ -31,6 +32,7 @@ program IshikoTimeTests : IshikoTestFrameworkCore, IshikoTime
     {
         ../../src/DateTests.cpp
         ../../src/main.cpp
+        ../../src/StopwatchTests.cpp
         ../../src/SystemTimeTests.cpp
         ../../src/UTCTimeTests.cpp
     }

@@ -2,14 +2,11 @@ version: 2
 jobs:
   build:
     docker:
-      - image: ishiko/gcc-ishiko-cpp-build-prerequisites:0.1.0
+      - image: ishiko/gcc-ishiko-cpp-build-prerequisites:0.3.0
     steps:
       - run: 
           name: "Set ISHIKO_CPP environment variable and create workspace directory"
           command: mkdir -p /projects/ishiko/cpp && echo 'export ISHIKO_CPP="/projects/ishiko/cpp"' >> $BASH_ENV
-      - run:
-          name: "Install build dependency: Ishiko/C++ fmt"
-          command: cd /projects/ishiko/cpp && mkdir fmtlib && git clone https://github.com/ishiko-cpp/fmtlib_fmt.git fmt && cd fmt && mkdir build && cd build && cmake -DCMAKE_INSTALL_PREFIX=/projects/ishiko/cpp .. && make && make install && echo 'export ISHIKO_CPP_THIRD_PARTY_FMT="/projects/ishiko/cpp"' >> $BASH_ENV
       - checkout:
           path: /projects/ishiko/cpp/time
       - run:
@@ -21,6 +18,9 @@ jobs:
       - run:
           name: "Install test dependency: Ishiko/C++ Errors"
           command: cd /projects/ishiko/cpp && git clone https://github.com/ishiko-cpp/errors.git && cd errors/build/gnumake && make
+      - run:
+          name: "Install test dependency: Ishiko/C++ Memory"
+          command: cd /projects/ishiko/cpp && git clone https://github.com/ishiko-cpp/memory.git && cd memory/build/gnumake && make
       - run:
           name: "Install test dependency: Ishiko/C++ Types"
           command: cd /projects/ishiko/cpp && git clone https://github.com/ishiko-cpp/types.git && cd types/build/gnumake && make
@@ -37,8 +37,14 @@ jobs:
           name: "Install test dependency: Ishiko/C++ FileSystem"
           command: cd /projects/ishiko/cpp && git clone https://github.com/ishiko-cpp/filesystem.git && cd filesystem/build/gnumake && make
       - run:
+          name: "Install test dependency: Ishiko/C++ XML"
+          command: cd /projects/ishiko/cpp && git clone https://github.com/ishiko-cpp/xml.git && cd xml/build/gnumake && make
+      - run:
           name: "Install test dependency: Ishiko/C++ Diff"
           command: cd /projects/ishiko/cpp && git clone https://github.com/ishiko-cpp/diff.git && cd diff/build/gnumake && make
+      - run:
+          name: "Install test dependency: Ishiko/C++ Configuration"
+          command: cd /projects/ishiko/cpp && git clone https://github.com/ishiko-cpp/configuration.git && cd configuration/build/gnumake && make
       - run:
           name: "Install test dependency: Ishiko/C++ Tests/Core"
           command: cd /projects/ishiko/cpp && git clone https://github.com/ishiko-cpp/test-framework.git && cd test-framework/core/build/gnumake && make
