@@ -23,6 +23,7 @@ program IshikoTimeTests : IshikoTestFrameworkCore, IshikoTime
     headers
     {
         ../../src/DateTests.hpp
+        ../../src/StopwatchTests.hpp
         ../../src/SystemTimeTests.hpp
         ../../src/UTCTimeTests.hpp
     }
@@ -31,6 +32,7 @@ program IshikoTimeTests : IshikoTestFrameworkCore, IshikoTime
     {
         ../../src/DateTests.cpp
         ../../src/main.cpp
+        ../../src/StopwatchTests.cpp
         ../../src/SystemTimeTests.cpp
         ../../src/UTCTimeTests.cpp
     }

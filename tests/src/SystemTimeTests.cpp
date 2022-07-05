@@ -9,7 +9,6 @@
 #include <boost/date_time.hpp>
 
 using namespace Ishiko;
-using namespace std;
 
 SystemTimeTests::SystemTimeTests(const TestNumber& number, const TestContext& context)
     : TestSequence(number, "SystemTime tests", context)

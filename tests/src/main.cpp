@@ -5,6 +5,7 @@
 */
 
 #include "DateTests.hpp"
+#include "StopwatchTests.hpp"
 #include "SystemTimeTests.hpp"
 #include "UTCTimeTests.hpp"
 #include <Ishiko/TestFramework/Core.hpp>
@@ -20,6 +21,7 @@ int main(int argc, char* argv[])
     theTests.append<SystemTimeTests>();
     theTests.append<DateTests>();
     theTests.append<UTCTimeTests>();
+    theTests.append<StopwatchTests>();
 
     return theTestHarness.run();
 }
