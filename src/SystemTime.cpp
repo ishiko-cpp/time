@@ -11,6 +11,10 @@ using namespace boost::posix_time;
 namespace Ishiko
 {
 
+SystemTime::SystemTime()
+{
+}
+
 SystemTime::SystemTime(ptime timePoint)
     : m_time(timePoint)
 {
