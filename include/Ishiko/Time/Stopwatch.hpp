@@ -7,4 +7,13 @@
 #ifndef _ISHIKO_CPP_TIME_STOPWATCH_HPP_
 #define _ISHIKO_CPP_TIME_STOPWATCH_HPP_
 
+namespace Ishiko
+{
+
+class Stopwatch
+{
+};
+
+}
+
 #endif

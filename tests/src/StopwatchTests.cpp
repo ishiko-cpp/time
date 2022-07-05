@@ -5,6 +5,7 @@
 */
 
 #include "StopwatchTests.hpp"
+#include "Ishiko/Time/Stopwatch.hpp"
 
 using namespace Ishiko;
 
@@ -16,4 +17,7 @@ StopwatchTests::StopwatchTests(const TestNumber& number, const TestContext& cont
 
 void StopwatchTests::ConstructorTest1(Test& test)
 {
+    Stopwatch stopwatch;
+
+    ISHIKO_TEST_PASS();
 }

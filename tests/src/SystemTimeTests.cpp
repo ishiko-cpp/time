@@ -19,7 +19,7 @@ SystemTimeTests::SystemTimeTests(const TestNumber& number, const TestContext& co
 
 void SystemTimeTests::ConstructorTest1(Test& test)
 {
-    SystemTime time(boost::posix_time::ptime());
+    SystemTime time = boost::posix_time::ptime();
 
     // TODO: test values
     ISHIKO_TEST_PASS();
