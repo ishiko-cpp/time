@@ -1,11 +1,11 @@
 /*
-    Copyright (c) 2021-2022 Xavier Leclercq
+    Copyright (c) 2021-2023 Xavier Leclercq
     Released under the MIT License
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
 
 #include "DateTests.hpp"
-#include <Ishiko/Time/Date.hpp>
+#include "Ishiko/Time/Date.hpp"
 
 using namespace Ishiko;
 

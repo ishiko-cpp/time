@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2021-2022 Xavier Leclercq
+    Copyright (c) 2021-2023 Xavier Leclercq
     Released under the MIT License
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
@@ -7,6 +7,7 @@
 #include "DateTests.hpp"
 #include "StopwatchTests.hpp"
 #include "SystemTimeTests.hpp"
+#include "TimeOfDayTests.hpp"
 #include "UTCTimeTests.hpp"
 #include <Ishiko/TestFramework/Core.hpp>
 #include <Ishiko/Time/linkoptions.hpp>
@@ -31,6 +32,7 @@ int main(int argc, char* argv[])
         TestSequence& theTests = theTestHarness.tests();
         theTests.append<SystemTimeTests>();
         theTests.append<DateTests>();
+        theTests.append<TimeOfDayTests>();
         theTests.append<UTCTimeTests>();
         theTests.append<StopwatchTests>();
 

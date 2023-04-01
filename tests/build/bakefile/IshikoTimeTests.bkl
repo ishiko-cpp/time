@@ -26,6 +26,7 @@ program IshikoTimeTests : IshikoTestFrameworkCore, IshikoTime
         ../../src/DateTests.hpp
         ../../src/StopwatchTests.hpp
         ../../src/SystemTimeTests.hpp
+        ../../src/TimeOfDayTests.hpp
         ../../src/UTCTimeTests.hpp
     }
 
@@ -35,6 +36,7 @@ program IshikoTimeTests : IshikoTestFrameworkCore, IshikoTime
         ../../src/main.cpp
         ../../src/StopwatchTests.cpp
         ../../src/SystemTimeTests.cpp
+        ../../src/TimeOfDayTests.cpp
         ../../src/UTCTimeTests.cpp
     }
 }

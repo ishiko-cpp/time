@@ -1,11 +1,11 @@
 /*
-    Copyright (c) 2021-2022 Xavier Leclercq
+    Copyright (c) 2021-2023 Xavier Leclercq
     Released under the MIT License
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
 
-#ifndef _ISHIKO_CPP_TIME_DATE_HPP_
-#define _ISHIKO_CPP_TIME_DATE_HPP_
+#ifndef GUARD_ISHIKO_CPP_TIME_DATE_HPP
+#define GUARD_ISHIKO_CPP_TIME_DATE_HPP
 
 #include "DayOfWeek.hpp"
 #include "Month.hpp"
@@ -25,7 +25,6 @@ public:
     Month month() const;
     unsigned char day() const;
     DayOfWeek dayOfWeek() const;
-
 
     std::string toISO8601String() const;
 

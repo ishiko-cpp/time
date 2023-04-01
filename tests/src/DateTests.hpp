@@ -1,11 +1,11 @@
 /*
-    Copyright (c) 2021-2022 Xavier Leclercq
+    Copyright (c) 2021-2023 Xavier Leclercq
     Released under the MIT License
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
 
-#ifndef _ISHIKO_CPP_TIME_TESTS_DATETESTS_HPP_
-#define _ISHIKO_CPP_TIME_TESTS_DATETESTS_HPP_
+#ifndef GUARD_ISHIKO_CPP_TIME_TESTS_DATETESTS_HPP
+#define GUARD_ISHIKO_CPP_TIME_TESTS_DATETESTS_HPP
 
 #include <Ishiko/TestFramework/Core.hpp>
 
