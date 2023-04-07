@@ -9,6 +9,7 @@
 
 #include "Date.hpp"
 #include "Month.hpp"
+#include "TimeOfDay.hpp"
 
 namespace Ishiko
 {
@@ -17,11 +18,16 @@ namespace Ishiko
     public:
         DateAndOptionalTime(int year, Month month, unsigned char day);
         DateAndOptionalTime(int year, unsigned char month, unsigned char day);
+        DateAndOptionalTime(int year, unsigned char month, unsigned char day, unsigned char hours,
+            unsigned char minutes, unsigned char seconds);
 
         Date date() const;
+        bool getTimeOfDay(TimeOfDay& time_of_day) const;
 
     private:
         Date m_date;
+        TimeOfDay m_time;
+        bool m_has_time;
     };
 }
 
