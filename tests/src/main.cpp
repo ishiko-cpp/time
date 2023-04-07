@@ -4,6 +4,7 @@
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
 
+#include "DateAndOptionalTimeTests.hpp"
 #include "DateTests.hpp"
 #include "StopwatchTests.hpp"
 #include "SystemTimeTests.hpp"
@@ -34,6 +35,7 @@ int main(int argc, char* argv[])
         theTests.append<DateTests>();
         theTests.append<TimeOfDayTests>();
         theTests.append<UTCTimeTests>();
+        theTests.append<DateAndOptionalTimeTests>();
         theTests.append<StopwatchTests>();
 
         return theTestHarness.run();

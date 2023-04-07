@@ -156,6 +156,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\DateAndOptionalTimeTests.cpp" />
     <ClCompile Include="..\..\src\DateTests.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\StopwatchTests.cpp" />
@@ -164,6 +165,7 @@
     <ClCompile Include="..\..\src\UTCTimeTests.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\src\DateAndOptionalTimeTests.hpp" />
     <ClInclude Include="..\..\src\DateTests.hpp" />
     <ClInclude Include="..\..\src\StopwatchTests.hpp" />
     <ClInclude Include="..\..\src\SystemTimeTests.hpp" />

@@ -18,7 +18,7 @@ DateTests::DateTests(const TestNumber& number, const TestContext& context)
 
 void DateTests::ConstructorTest1(Test& test)
 {
-    Date date(2021, Month::december, 25);
+    Date date{2021, Month::december, 25};
 
     ISHIKO_TEST_FAIL_IF_NEQ(date.year(), 2021);
     ISHIKO_TEST_FAIL_IF_NEQ(date.month(), Month::december);
@@ -28,7 +28,7 @@ void DateTests::ConstructorTest1(Test& test)
 
 void DateTests::ToISO8601StringTest1(Test& test)
 {
-    Date date(2021, Month::january, 3);
+    Date date{2021, Month::january, 3};
 
     ISHIKO_TEST_FAIL_IF_NEQ(date.toISO8601String(), "2021-01-03");
     ISHIKO_TEST_PASS();

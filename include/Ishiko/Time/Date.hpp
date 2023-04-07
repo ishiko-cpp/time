@@ -13,25 +13,23 @@
 
 namespace Ishiko
 {
+    class Date
+    {
+    public:
+        Date(int year, Month month, unsigned char day);
+        Date(int year, unsigned char month, unsigned char day);
+        Date(const boost::gregorian::date& date);
 
-class Date
-{
-public:
-    Date(int year, Month month, unsigned char day);
-    Date(int year, unsigned char month, unsigned char day);
-    Date(const boost::gregorian::date& date);
+        int year() const;
+        Month month() const;
+        unsigned char day() const;
+        DayOfWeek dayOfWeek() const;
 
-    int year() const;
-    Month month() const;
-    unsigned char day() const;
-    DayOfWeek dayOfWeek() const;
+        std::string toISO8601String() const;
 
-    std::string toISO8601String() const;
-
-private:
-    boost::gregorian::date m_date;
-};
-
+    private:
+        boost::gregorian::date m_date;
+    };
 }
 
 #endif

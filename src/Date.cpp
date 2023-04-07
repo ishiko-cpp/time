@@ -7,23 +7,20 @@
 #include "Date.hpp"
 #include <fmt/core.h>
 
-using namespace std;
-
-namespace Ishiko
-{
+using namespace Ishiko;
 
 Date::Date(int year, Month month, unsigned char day)
-    : m_date(year, month.number(), day)
+    : m_date{year, month.number(), day}
 {
 }
 
 Date::Date(int year, unsigned char month, unsigned char day)
-    : m_date(year, month, day)
+    : m_date{year, month, day}
 {
 }
 
 Date::Date(const boost::gregorian::date& date)
-    : m_date(date)
+    : m_date{date}
 {
 }
 
@@ -47,9 +44,7 @@ DayOfWeek Date::dayOfWeek() const
     return m_date.day_of_week();
 }
 
-string Date::toISO8601String() const
+std::string Date::toISO8601String() const
 {
     return fmt::format("{:#04d}-{:#02d}-{:#02d}", m_date.year(), m_date.month().as_number(), m_date.day());
-}
-
 }
