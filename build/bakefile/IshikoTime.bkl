@@ -36,23 +36,29 @@ library IshikoTime : fmt, Boost
     {
         ../../include/Ishiko/Time.hpp
         ../../include/Ishiko/Time/Date.hpp
+        ../../include/Ishiko/Time/DateAndOptionalTime.hpp
         ../../include/Ishiko/Time/DayOfWeek.hpp
+        ../../include/Ishiko/Time/DayOfYear.hpp
         ../../include/Ishiko/Time/linkoptions.hpp
         ../../include/Ishiko/Time/Month.hpp
         ../../include/Ishiko/Time/Stopwatch.hpp
         ../../include/Ishiko/Time/SystemTime.hpp
         ../../include/Ishiko/Time/TimeOfDay.hpp
+        ../../include/Ishiko/Time/TimeZone.hpp
         ../../include/Ishiko/Time/UTCTime.hpp
     }
 
     sources
     {
         ../../src/Date.cpp
+        ../../src/DateAndOptionalTime.cpp
         ../../src/DayOfWeek.cpp
+        ../../src/DayOfYear.cpp
         ../../src/Month.cpp
         ../../src/Stopwatch.cpp
         ../../src/SystemTime.cpp
         ../../src/TimeOfDay.cpp
+        ../../src/TimeZone.cpp
         ../../src/UTCTime.cpp
     }
 }
