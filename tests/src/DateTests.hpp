@@ -16,6 +16,8 @@ public:
 
 private:
     static void ConstructorTest1(Ishiko::Test& test);
+    static void EqualityOperatorTest1(Ishiko::Test& test);
+    static void InequalityOperatorTest1(Ishiko::Test& test);
     static void ToISO8601StringTest1(Ishiko::Test& test);
 };
 

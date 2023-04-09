@@ -20,6 +20,7 @@ namespace Ishiko
         DateAndOptionalTime(int year, unsigned char month, unsigned char day);
         DateAndOptionalTime(int year, unsigned char month, unsigned char day, unsigned char hours,
             unsigned char minutes, unsigned char seconds);
+        DateAndOptionalTime(boost::gregorian::date date);
 
         Date date() const;
         bool getTimeOfDay(TimeOfDay& time_of_day) const;

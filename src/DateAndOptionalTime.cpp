@@ -24,6 +24,11 @@ DateAndOptionalTime::DateAndOptionalTime(int year, unsigned char month, unsigned
 {
 }
 
+DateAndOptionalTime::DateAndOptionalTime(boost::gregorian::date date)
+    : m_date{date}, m_time{0, 0, 0}, m_has_time{false}
+{
+}
+
 Date DateAndOptionalTime::date() const
 {
     return m_date;
