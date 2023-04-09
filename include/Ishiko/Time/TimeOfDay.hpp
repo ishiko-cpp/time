@@ -1,11 +1,11 @@
 /*
-    Copyright (c) 2022 Xavier Leclercq
+    Copyright (c) 2022-2023 Xavier Leclercq
     Released under the MIT License
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
 
-#ifndef _ISHIKO_CPP_TIME_TIMEOFDAY_HPP_
-#define _ISHIKO_CPP_TIME_TIMEOFDAY_HPP_
+#ifndef GUARD_ISHIKO_CPP_TIME_TIMEOFDAY_HPP
+#define GUARD_ISHIKO_CPP_TIME_TIMEOFDAY_HPP
 
 #include <boost/date_time.hpp>
 
@@ -21,6 +21,9 @@ public:
     unsigned char hours() const;
     unsigned char minutes() const;
     unsigned char seconds() const;
+
+    bool operator==(const TimeOfDay& other) const;
+    bool operator!=(const TimeOfDay& other) const;
 
 private:
     boost::posix_time::time_duration m_timeOfDay;

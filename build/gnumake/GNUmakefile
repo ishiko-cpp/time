@@ -74,15 +74,21 @@ ISHIKO_CPP_FMT_ROOT ?= $(ISHIKO_CPP_THIRD_PARTY_FMT)
 
 all: ../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),IshikoTime-d,IshikoTime).a
 
-../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),IshikoTime-d,IshikoTime).a: $(_builddir)IshikoTime_Date.o $(_builddir)IshikoTime_DayOfWeek.o $(_builddir)IshikoTime_Month.o $(_builddir)IshikoTime_Stopwatch.o $(_builddir)IshikoTime_SystemTime.o $(_builddir)IshikoTime_TimeOfDay.o $(_builddir)IshikoTime_UTCTime.o
-	$(AR) rc $@ $(_builddir)IshikoTime_Date.o $(_builddir)IshikoTime_DayOfWeek.o $(_builddir)IshikoTime_Month.o $(_builddir)IshikoTime_Stopwatch.o $(_builddir)IshikoTime_SystemTime.o $(_builddir)IshikoTime_TimeOfDay.o $(_builddir)IshikoTime_UTCTime.o
+../bakefile/../../lib/lib$(if $(call _equal,$(config),Debug),IshikoTime-d,IshikoTime).a: $(_builddir)IshikoTime_Date.o $(_builddir)IshikoTime_DateAndOptionalTime.o $(_builddir)IshikoTime_DayOfWeek.o $(_builddir)IshikoTime_DayOfYear.o $(_builddir)IshikoTime_Month.o $(_builddir)IshikoTime_Stopwatch.o $(_builddir)IshikoTime_SystemTime.o $(_builddir)IshikoTime_TimeOfDay.o $(_builddir)IshikoTime_TimeZone.o $(_builddir)IshikoTime_UTCTime.o
+	$(AR) rc $@ $(_builddir)IshikoTime_Date.o $(_builddir)IshikoTime_DateAndOptionalTime.o $(_builddir)IshikoTime_DayOfWeek.o $(_builddir)IshikoTime_DayOfYear.o $(_builddir)IshikoTime_Month.o $(_builddir)IshikoTime_Stopwatch.o $(_builddir)IshikoTime_SystemTime.o $(_builddir)IshikoTime_TimeOfDay.o $(_builddir)IshikoTime_TimeZone.o $(_builddir)IshikoTime_UTCTime.o
 	$(RANLIB) $@
 
 $(_builddir)IshikoTime_Date.o: ../../src/Date.cpp
 	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/Date.cpp
 
+$(_builddir)IshikoTime_DateAndOptionalTime.o: ../../src/DateAndOptionalTime.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/DateAndOptionalTime.cpp
+
 $(_builddir)IshikoTime_DayOfWeek.o: ../../src/DayOfWeek.cpp
 	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/DayOfWeek.cpp
+
+$(_builddir)IshikoTime_DayOfYear.o: ../../src/DayOfYear.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/DayOfYear.cpp
 
 $(_builddir)IshikoTime_Month.o: ../../src/Month.cpp
 	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/Month.cpp
@@ -95,6 +101,9 @@ $(_builddir)IshikoTime_SystemTime.o: ../../src/SystemTime.cpp
 
 $(_builddir)IshikoTime_TimeOfDay.o: ../../src/TimeOfDay.cpp
 	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/TimeOfDay.cpp
+
+$(_builddir)IshikoTime_TimeZone.o: ../../src/TimeZone.cpp
+	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/TimeZone.cpp
 
 $(_builddir)IshikoTime_UTCTime.o: ../../src/UTCTime.cpp
 	$(CXX) -c -o $@ $(CPPFLAGS) $(CXXFLAGS) -MD -MP -fPIC -DPIC -pthread -I$(ISHIKO_CPP_FMT_ROOT)/include -I$(ISHIKO_CPP_BOOST_ROOT)/include -I../../include/Ishiko/Time -std=c++11 ../../src/UTCTime.cpp
