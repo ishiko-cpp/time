@@ -27,6 +27,10 @@ namespace Ishiko
 
         bool operator==(Date other) const;
         bool operator!=(Date other) const;
+        bool operator<(Date other) const;
+        bool operator<=(Date other) const;
+        bool operator>(Date other) const;
+        bool operator>=(Date other) const;
 
         std::string toISO8601String() const;
         boost::gregorian::date toBoostDate() const;
