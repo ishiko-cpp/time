@@ -22,8 +22,15 @@ namespace Ishiko
             unsigned char minutes, unsigned char seconds);
         DateAndOptionalTime(boost::gregorian::date date);
 
+        void operator=(Date date);
+
         Date date() const;
         bool getTimeOfDay(TimeOfDay& time_of_day) const;
+        TimeOfDay getTimeOfDayOrDefault(TimeOfDay default_time_of_day) const;
+
+        bool operator==(Date other) const;
+        bool operator!=(Date other) const;
+        bool operator<(DateAndOptionalTime other) const;
 
     private:
         Date m_date;

@@ -24,6 +24,7 @@ public:
 
     bool operator==(const TimeOfDay& other) const;
     bool operator!=(const TimeOfDay& other) const;
+    bool operator<(const TimeOfDay& other) const;
 
 private:
     boost::posix_time::time_duration m_timeOfDay;

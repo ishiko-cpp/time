@@ -44,3 +44,8 @@ bool TimeOfDay::operator!=(const TimeOfDay& other) const
 {
     return (m_timeOfDay != other.m_timeOfDay);
 }
+
+bool TimeOfDay::operator<(const TimeOfDay& other) const
+{
+    return (m_timeOfDay < other.m_timeOfDay);
+}
