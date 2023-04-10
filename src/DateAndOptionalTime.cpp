@@ -29,6 +29,12 @@ DateAndOptionalTime::DateAndOptionalTime(boost::gregorian::date date)
 {
 }
 
+void DateAndOptionalTime::operator=(Date date)
+{
+    m_date = date;
+    m_has_time = false;
+}
+
 Date DateAndOptionalTime::date() const
 {
     return m_date;
@@ -41,4 +47,37 @@ bool DateAndOptionalTime::getTimeOfDay(TimeOfDay& time_of_day) const
         time_of_day = m_time;
     }
     return m_has_time;
+}
+
+TimeOfDay DateAndOptionalTime::getTimeOfDayOrDefault(TimeOfDay default_time_of_day) const
+{
+    if (m_has_time)
+    {
+        default_time_of_day = m_time;
+    }
+    return default_time_of_day;
+}
+
+bool DateAndOptionalTime::operator==(Date other) const
+{
+    return (!m_has_time && (m_date == other));
+}
+
+bool DateAndOptionalTime::operator!=(Date other) const
+{
+    return (m_has_time || (m_date != other));
+}
+
+bool DateAndOptionalTime::operator<(DateAndOptionalTime other) const
+{
+    if (m_date < other.m_date)
+    {
+        return true;
+    }
+    else if (m_date == other.m_date)
+    {
+        const TimeOfDay midnight{0, 0, 0};
+        return (getTimeOfDayOrDefault(midnight) < other.getTimeOfDayOrDefault(midnight));
+    }
+    return false;
 }
