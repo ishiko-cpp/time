@@ -21,6 +21,7 @@ namespace Ishiko
         DateAndOptionalTime(int year, unsigned char month, unsigned char day, unsigned char hours,
             unsigned char minutes, unsigned char seconds);
         DateAndOptionalTime(boost::gregorian::date date);
+        DateAndOptionalTime(boost::gregorian::date date, boost::posix_time::time_duration time_of_day);
 
         void operator=(Date date);
 

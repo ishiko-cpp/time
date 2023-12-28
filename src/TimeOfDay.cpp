@@ -5,6 +5,7 @@
 */
 
 #include "TimeOfDay.hpp"
+#include <fmt/core.h>
 
 using namespace boost::posix_time;
 
@@ -48,4 +49,9 @@ bool TimeOfDay::operator!=(const TimeOfDay& other) const
 bool TimeOfDay::operator<(const TimeOfDay& other) const
 {
     return (m_timeOfDay < other.m_timeOfDay);
+}
+
+std::string TimeOfDay::toISO8601String() const
+{
+    return fmt::format("{:#02d}:{:#02d}:{:#02d}", m_timeOfDay.hours(), m_timeOfDay.minutes(), m_timeOfDay.seconds());
 }
