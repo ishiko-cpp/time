@@ -26,6 +26,8 @@ public:
     bool operator!=(const TimeOfDay& other) const;
     bool operator<(const TimeOfDay& other) const;
 
+    std::string toISO8601String() const;
+
 private:
     boost::posix_time::time_duration m_timeOfDay;
 };
