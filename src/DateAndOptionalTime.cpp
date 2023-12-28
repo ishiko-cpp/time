@@ -29,6 +29,11 @@ DateAndOptionalTime::DateAndOptionalTime(boost::gregorian::date date)
 {
 }
 
+DateAndOptionalTime::DateAndOptionalTime(boost::gregorian::date date, boost::posix_time::time_duration time_of_day)
+    : m_date{date}, m_time{time_of_day}, m_has_time{true}
+{
+}
+
 void DateAndOptionalTime::operator=(Date date)
 {
     m_date = date;
