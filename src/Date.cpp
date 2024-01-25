@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2021-2023 Xavier Leclercq
+    Copyright (c) 2021-2024 Xavier Leclercq
     Released under the MIT License
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
@@ -82,4 +82,11 @@ std::string Date::toISO8601String() const
 boost::gregorian::date Date::toBoostDate() const
 {
     return m_date;
+}
+
+Date Date::yesterday() const
+{
+    boost::gregorian::date result{m_date};
+    result -= boost::gregorian::days(1);
+    return result;
 }
