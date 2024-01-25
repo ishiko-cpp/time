@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2021-2023 Xavier Leclercq
+    Copyright (c) 2021-2024 Xavier Leclercq
     Released under the MIT License
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
@@ -34,6 +34,8 @@ namespace Ishiko
 
         std::string toISO8601String() const;
         boost::gregorian::date toBoostDate() const;
+
+        Date yesterday() const;
 
     private:
         boost::gregorian::date m_date;
