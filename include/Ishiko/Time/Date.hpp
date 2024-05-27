@@ -16,8 +16,8 @@ namespace Ishiko
     class Date
     {
     public:
-        Date(int year, Month month, unsigned char day);
-        Date(int year, unsigned char month, unsigned char day);
+        Date(unsigned short year, Month month, unsigned char day);
+        Date(unsigned short year, unsigned char month, unsigned char day);
         Date(boost::gregorian::date date);
 
         int year() const;
