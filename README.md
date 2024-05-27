@@ -14,7 +14,7 @@ Basic classes to represent time.
 
 [![ishiko-cpp](https://circleci.com/gh/ishiko-cpp/time.svg?style=shield)](https://circleci.com/gh/ishiko-cpp/time)
 
-This project is intended for use by its author only.
+This project is in early development and not ready for public use yet. 
 
 # Usage
 
@@ -26,6 +26,6 @@ None.
 
 # License
 
-Copyright (c) 2021-2023 Xavier Leclercq\
+Copyright (c) 2021-2024 Xavier Leclercq\
 Released under the MIT License\
 See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt

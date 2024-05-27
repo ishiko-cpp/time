@@ -9,12 +9,12 @@
 
 using namespace Ishiko;
 
-Date::Date(int year, Month month, unsigned char day)
+Date::Date(unsigned short year, Month month, unsigned char day)
     : m_date{year, month.number(), day}
 {
 }
 
-Date::Date(int year, unsigned char month, unsigned char day)
+Date::Date(unsigned short year, unsigned char month, unsigned char day)
     : m_date{year, month, day}
 {
 }

@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2023 Xavier Leclercq
+    Copyright (c) 2023-2024 Xavier Leclercq
     Released under the MIT License
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
@@ -16,9 +16,9 @@ namespace Ishiko
     class DateAndOptionalTime
     {
     public:
-        DateAndOptionalTime(int year, Month month, unsigned char day);
-        DateAndOptionalTime(int year, unsigned char month, unsigned char day);
-        DateAndOptionalTime(int year, unsigned char month, unsigned char day, unsigned char hours,
+        DateAndOptionalTime(unsigned short year, Month month, unsigned char day);
+        DateAndOptionalTime(unsigned short year, unsigned char month, unsigned char day);
+        DateAndOptionalTime(unsigned short year, unsigned char month, unsigned char day, unsigned char hours,
             unsigned char minutes, unsigned char seconds);
         DateAndOptionalTime(boost::gregorian::date date);
         DateAndOptionalTime(boost::gregorian::date date, boost::posix_time::time_duration time_of_day);
