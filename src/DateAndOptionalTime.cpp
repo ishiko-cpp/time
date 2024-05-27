@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2023 Xavier Leclercq
+    Copyright (c) 2023-2024 Xavier Leclercq
     Released under the MIT License
     See https://github.com/ishiko-cpp/time/blob/main/LICENSE.txt
 */
@@ -8,17 +8,17 @@
 
 using namespace Ishiko;
 
-DateAndOptionalTime::DateAndOptionalTime(int year, Month month, unsigned char day)
+DateAndOptionalTime::DateAndOptionalTime(unsigned short year, Month month, unsigned char day)
     : m_date{year, month.number(), day}, m_time{0, 0, 0}, m_has_time{false}
 {
 }
 
-DateAndOptionalTime::DateAndOptionalTime(int year, unsigned char month, unsigned char day)
+DateAndOptionalTime::DateAndOptionalTime(unsigned short year, unsigned char month, unsigned char day)
     : m_date{year, month, day}, m_time{0, 0, 0}, m_has_time{false}
 {
 }
 
-DateAndOptionalTime::DateAndOptionalTime(int year, unsigned char month, unsigned char day, unsigned char hours,
+DateAndOptionalTime::DateAndOptionalTime(unsigned short year, unsigned char month, unsigned char day, unsigned char hours,
     unsigned char minutes, unsigned char seconds)
     : m_date{year, month, day}, m_time{hours, minutes, seconds}, m_has_time{true}
 {
