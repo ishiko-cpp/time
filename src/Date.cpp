@@ -76,7 +76,8 @@ bool Date::operator>=(Date other) const
 
 std::string Date::toISO8601String() const
 {
-    return fmt::format("{:#04d}-{:#02d}-{:#02d}", m_date.year(), m_date.month().as_number(), m_date.day());
+    return fmt::format("{:#04d}-{:#02d}-{:#02d}", (boost::gregorian::greg_year::value_type)m_date.year(),
+        m_date.month().as_number(), (boost::gregorian::greg_day::value_type)m_date.day());
 }
 
 boost::gregorian::date Date::toBoostDate() const
