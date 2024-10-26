@@ -11,7 +11,7 @@ jobs:
           path: /workspace/projects/ishiko/cpp/time
       - run:
           name: Build
-          command: cd /workspace/projects/ishiko/cpp/time/build/gnumake && make
+          command: cd /workspace/projects/ishiko/cpp/time/build-files/gnumake && make
       - run:
           name: "Install test dependency: Ishiko/C++ BasePlatform"
           command: cd /workspace/projects/ishiko/cpp && git clone https://github.com/ishiko-cpp/base-platform.git && cd base-platform/build-files/gnumake && make
@@ -53,10 +53,10 @@ jobs:
           command: cd /workspace/projects/ishiko/cpp && git clone https://github.com/ishiko-cpp/test-framework.git && cd test-framework/core/build-files/gnumake && make
       - run:
           name: Test build
-          command: cd /workspace/projects/ishiko/cpp/time/tests/build/gnumake && make
+          command: cd /workspace/projects/ishiko/cpp/time/tests/build-files/gnumake && make
       - run:
           name: Run the tests
-          command: cd /workspace/projects/ishiko/cpp/time/tests/build/gnumake && ./IshikoTimeTests --persistent-storage=/build/test-output --junit-xml-test-report=/build/test-results/IshikoTime.xml
+          command: cd /workspace/projects/ishiko/cpp/time/tests/build-files/gnumake && ./IshikoTimeTests --persistent-storage=/build/test-output --junit-xml-test-report=/build/test-results/IshikoTime.xml
       - store_artifacts:
           name: Upload test output files
           path: /build/test-output
